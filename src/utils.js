@@ -21,7 +21,8 @@ function getBaseUrl(db) {
   path = path.substr(-1, 1) === '/' ? path.substr(0, -1) : path;
   let parentPath = path.split('/').slice(0, -1).join('/');
 
-  return url.origin + parentPath;
+  // return url.origin + parentPath;
+    return url.toString();
 }
 
 function getConfigUrl(db, nodeName) {
